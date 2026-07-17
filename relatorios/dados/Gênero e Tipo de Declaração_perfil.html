@@ -1,0 +1,1184 @@
+
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <title>Perfil de Dados - Gênero e Tipo de Declaração</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                <style>
+                    body { padding: 20px; }
+                    h1, h2, h3 { margin-top: 30px; }
+                    pre { background-color: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
+                    .back-link { margin-bottom: 20px; display: inline-block; }
+                </style>
+            </head>
+            <body>
+                <div class="container-fluid">
+                    <a href="index.html" class="btn btn-outline-secondary back-link">&larr; Voltar para o Menu</a>
+                    <h1 class="text-primary">Perfil Exploratório - Gênero e Tipo de Declaração</h1>
+                    <hr>
+                    
+                    <h2>1. Visão Geral</h2>
+                    <ul>
+                        <li><strong>Total de Linhas:</strong> 52</li>
+                        <li><strong>Total de Colunas:</strong> 44</li>
+                    </ul>
+                    
+                    <h2>2. Estrutura dos Dados (Info)</h2>
+                    <pre><class 'pandas.DataFrame'>
+RangeIndex: 52 entries, 0 to 51
+Data columns (total 44 columns):
+ #   Column                                                          Non-Null Count  Dtype
+---  ------                                                          --------------  -----
+ 0   Ano-Calendário                                                  52 non-null     int64
+ 1   Gênero                                                          52 non-null     str  
+ 2   Tipo de Declaração                                              52 non-null     str  
+ 3   Quantidade de Declarantes                                       52 non-null     int64
+ 4   Rendimentos Tributáveis                                         52 non-null     str  
+ 5   Rendimentos sujeitos a Tributação Exclusiva                     52 non-null     str  
+ 6   Rendimentos Isentos                                             52 non-null     str  
+ 7   Dedução Previdenciária Total                                    52 non-null     str  
+ 8   Deduções Previdência Oficial                                    25 non-null     str  
+ 9   Deduções Previdenciárias RRA                                    25 non-null     str  
+ 10  Deduções Previdência Privada e FAPI                             25 non-null     str  
+ 11  Deduções com Dependentes                                        52 non-null     str  
+ 12  Deduções com Instrução                                          52 non-null     str  
+ 13  Deduções com despesas Médicas                                   52 non-null     str  
+ 14  Dedução de Livro Caixa                                          52 non-null     str  
+ 15  Deduções  com Pensão Alimentícia Total                          52 non-null     str  
+ 16  Deduções com Pensão Alimentícia Judicial                        25 non-null     str  
+ 17  Deduções com Pensão Alimentícia Escritural                      25 non-null     str  
+ 18  Deduções com Pensão Alimentícia RRA                             25 non-null     str  
+ 19  Desconto Padrão                                                 52 non-null     str  
+ 20  Base de Cálculo (RTL)                                           52 non-null     str  
+ 21  Imposto Devido                                                  52 non-null     str  
+ 22  Dedução de Incentivo                                            25 non-null     str  
+ 23  Imposto Devido 1                                                25 non-null     str  
+ 24  Imposto Devido RRA                                              25 non-null     str  
+ 25  Imposto Devido Total                                            25 non-null     str  
+ 26  Imposto Pago                                                    52 non-null     str  
+ 27  Imposto a Pagar                                                 52 non-null     str  
+ 28  Imposto a Restituir                                             52 non-null     str  
+ 29  Dívidas   e Ônus                                                52 non-null     str  
+ 30  Doações e Heranças Recebidas                                    28 non-null     str  
+ 31  Bens e Direitos                                                 52 non-null     str  
+ 32  Previdência Complementar (VGBL)                                 25 non-null     str  
+ 33  Valores Pagos com Previdência Complementar (PGBL)               25 non-null     str  
+ 34  Valores Pagos com Previdência Complementar de Natureza Pública  25 non-null     str  
+ 35  Valores Pagos com FAPI                                          25 non-null     str  
+ 36  Despesas com Instrução                                          25 non-null     str  
+ 37  Despesas Médicas                                                25 non-null     str  
+ 38  Pensão Alimentícia Judicial                                     25 non-null     str  
+ 39  Despesas com Pensão Alimentícia Escritural                      25 non-null     str  
+ 40  Despesas com Profissionais Liberais                             25 non-null     str  
+ 41  Despesas com Arrendamento Rural                                 25 non-null     str  
+ 42  Outras Despesas                                                 25 non-null     str  
+ 43  Doações Efetuadas                                               25 non-null     str  
+dtypes: int64(2), str(42)
+memory usage: 18.0 KB
+</pre>
+                    
+                    <h2>3. Estatísticas Descritivas</h2>
+                    <div class="table-responsive">
+                        <table border="1" class="dataframe table table-striped table-bordered">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ano-Calendário</th>
+      <th>Gênero</th>
+      <th>Tipo de Declaração</th>
+      <th>Quantidade de Declarantes</th>
+      <th>Rendimentos Tributáveis</th>
+      <th>Rendimentos sujeitos a Tributação Exclusiva</th>
+      <th>Rendimentos Isentos</th>
+      <th>Dedução Previdenciária Total</th>
+      <th>Deduções Previdência Oficial</th>
+      <th>Deduções Previdenciárias RRA</th>
+      <th>Deduções Previdência Privada e FAPI</th>
+      <th>Deduções com Dependentes</th>
+      <th>Deduções com Instrução</th>
+      <th>Deduções com despesas Médicas</th>
+      <th>Dedução de Livro Caixa</th>
+      <th>Deduções&nbsp;&nbsp;com Pensão Alimentícia Total</th>
+      <th>Deduções com Pensão Alimentícia Judicial</th>
+      <th>Deduções com Pensão Alimentícia Escritural</th>
+      <th>Deduções com Pensão Alimentícia RRA</th>
+      <th>Desconto Padrão</th>
+      <th>Base de Cálculo (RTL)</th>
+      <th>Imposto Devido</th>
+      <th>Dedução de Incentivo</th>
+      <th>Imposto Devido 1</th>
+      <th>Imposto Devido RRA</th>
+      <th>Imposto Devido Total</th>
+      <th>Imposto Pago</th>
+      <th>Imposto a Pagar</th>
+      <th>Imposto a Restituir</th>
+      <th>Dívidas&nbsp;&nbsp; e Ônus</th>
+      <th>Doações e Heranças Recebidas</th>
+      <th>Bens e Direitos</th>
+      <th>Previdência Complementar (VGBL)</th>
+      <th>Valores Pagos com Previdência Complementar (PGBL)</th>
+      <th>Valores Pagos com Previdência Complementar de Natureza Pública</th>
+      <th>Valores Pagos com FAPI</th>
+      <th>Despesas com Instrução</th>
+      <th>Despesas Médicas</th>
+      <th>Pensão Alimentícia Judicial</th>
+      <th>Despesas com Pensão Alimentícia Escritural</th>
+      <th>Despesas com Profissionais Liberais</th>
+      <th>Despesas com Arrendamento Rural</th>
+      <th>Outras Despesas</th>
+      <th>Doações Efetuadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>52.000000</td>
+      <td>52</td>
+      <td>52</td>
+      <td>5.200000e+01</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>28</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>NaN</td>
+      <td>4</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>21</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>52</td>
+      <td>28</td>
+      <td>52</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>23</td>
+      <td>25</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>NaN</td>
+      <td>Masculino</td>
+      <td>Individual/Conjunta</td>
+      <td>NaN</td>
+      <td>1125326,599</td>
+      <td>213549,4427</td>
+      <td>713004,6512</td>
+      <td>57900,7413</td>
+      <td>46717,60364</td>
+      <td>29,96123123</td>
+      <td>11153,17643</td>
+      <td>18103,35268</td>
+      <td>11565,68693</td>
+      <td>46258,00196</td>
+      <td>11316,45347</td>
+      <td>15098,61161</td>
+      <td>13402,68445</td>
+      <td>1685,813383</td>
+      <td>0</td>
+      <td>79614,33784</td>
+      <td>885469,5756</td>
+      <td>120597,5418</td>
+      <td>204,9364401</td>
+      <td>120392,6053</td>
+      <td>638,5128312</td>
+      <td>121027,2315</td>
+      <td>120588,9488</td>
+      <td>13684,97239</td>
+      <td>14566,02635</td>
+      <td>559201,9019</td>
+      <td>55334,08904</td>
+      <td>7557434,165</td>
+      <td>51305,19064</td>
+      <td>10809,68676</td>
+      <td>553,0327575</td>
+      <td>2749,849971</td>
+      <td>31506,10503</td>
+      <td>57837,08277</td>
+      <td>14774,88309</td>
+      <td>1910,929818</td>
+      <td>5789,242896</td>
+      <td>0,03</td>
+      <td>15888,12709</td>
+      <td>36861,5365</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>NaN</td>
+      <td>19</td>
+      <td>32</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2014.365385</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.361837e+06</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>4.120864</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.083773e+06</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2007.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.686000e+03</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2011.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.041725e+04</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2015.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.004127e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2018.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.418067e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2020.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.767324e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    
+                    <h2>4. Amostra de Dados (Primeiras 10 linhas)</h2>
+                    <div class="table-responsive">
+                        <table border="1" class="dataframe table table-striped table-bordered">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ano-Calendário</th>
+      <th>Gênero</th>
+      <th>Tipo de Declaração</th>
+      <th>Quantidade de Declarantes</th>
+      <th>Rendimentos Tributáveis</th>
+      <th>Rendimentos sujeitos a Tributação Exclusiva</th>
+      <th>Rendimentos Isentos</th>
+      <th>Dedução Previdenciária Total</th>
+      <th>Deduções Previdência Oficial</th>
+      <th>Deduções Previdenciárias RRA</th>
+      <th>Deduções Previdência Privada e FAPI</th>
+      <th>Deduções com Dependentes</th>
+      <th>Deduções com Instrução</th>
+      <th>Deduções com despesas Médicas</th>
+      <th>Dedução de Livro Caixa</th>
+      <th>Deduções&nbsp;&nbsp;com Pensão Alimentícia Total</th>
+      <th>Deduções com Pensão Alimentícia Judicial</th>
+      <th>Deduções com Pensão Alimentícia Escritural</th>
+      <th>Deduções com Pensão Alimentícia RRA</th>
+      <th>Desconto Padrão</th>
+      <th>Base de Cálculo (RTL)</th>
+      <th>Imposto Devido</th>
+      <th>Dedução de Incentivo</th>
+      <th>Imposto Devido 1</th>
+      <th>Imposto Devido RRA</th>
+      <th>Imposto Devido Total</th>
+      <th>Imposto Pago</th>
+      <th>Imposto a Pagar</th>
+      <th>Imposto a Restituir</th>
+      <th>Dívidas&nbsp;&nbsp; e Ônus</th>
+      <th>Doações e Heranças Recebidas</th>
+      <th>Bens e Direitos</th>
+      <th>Previdência Complementar (VGBL)</th>
+      <th>Valores Pagos com Previdência Complementar (PGBL)</th>
+      <th>Valores Pagos com Previdência Complementar de Natureza Pública</th>
+      <th>Valores Pagos com FAPI</th>
+      <th>Despesas com Instrução</th>
+      <th>Despesas Médicas</th>
+      <th>Pensão Alimentícia Judicial</th>
+      <th>Despesas com Pensão Alimentícia Escritural</th>
+      <th>Despesas com Profissionais Liberais</th>
+      <th>Despesas com Arrendamento Rural</th>
+      <th>Outras Despesas</th>
+      <th>Doações Efetuadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020</td>
+      <td>Masculino</td>
+      <td>Individual</td>
+      <td>17673241</td>
+      <td>1125326,599</td>
+      <td>213549,4427</td>
+      <td>713004,6512</td>
+      <td>57900,7413</td>
+      <td>46717,60364</td>
+      <td>29,96123123</td>
+      <td>11153,17643</td>
+      <td>18103,35268</td>
+      <td>11565,68693</td>
+      <td>46258,00196</td>
+      <td>11316,45347</td>
+      <td>15098,61161</td>
+      <td>13402,68445</td>
+      <td>1685,813383</td>
+      <td>10,11378602</td>
+      <td>79614,33784</td>
+      <td>885469,5756</td>
+      <td>120597,5418</td>
+      <td>204,9364401</td>
+      <td>120392,6053</td>
+      <td>638,5128312</td>
+      <td>121027,2315</td>
+      <td>120588,9488</td>
+      <td>13684,97239</td>
+      <td>14566,02635</td>
+      <td>559201,9019</td>
+      <td>55334,08904</td>
+      <td>7557434,165</td>
+      <td>51305,19064</td>
+      <td>10809,68676</td>
+      <td>553,0327575</td>
+      <td>2749,849971</td>
+      <td>31506,10503</td>
+      <td>57837,08277</td>
+      <td>14774,88309</td>
+      <td>1910,929818</td>
+      <td>5789,242896</td>
+      <td>414,2848584</td>
+      <td>15888,12709</td>
+      <td>36861,5365</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020</td>
+      <td>Masculino</td>
+      <td>Conjunta</td>
+      <td>196879</td>
+      <td>23275,68186</td>
+      <td>8417,894106</td>
+      <td>30609,99493</td>
+      <td>1565,966795</td>
+      <td>1164,925429</td>
+      <td>0,72593632</td>
+      <td>400,31543</td>
+      <td>629,3756956</td>
+      <td>292,1084986</td>
+      <td>2448,034598</td>
+      <td>450,5136448</td>
+      <td>176,4755932</td>
+      <td>154,9265843</td>
+      <td>21,41737018</td>
+      <td>0,13163868</td>
+      <td>345,5604805</td>
+      <td>17367,64655</td>
+      <td>3322,316551</td>
+      <td>12,38409856</td>
+      <td>3309,932452</td>
+      <td>19,59593345</td>
+      <td>3329,518445</td>
+      <td>3183,566067</td>
+      <td>455,056545</td>
+      <td>336,1787871</td>
+      <td>21028,53285</td>
+      <td>1867,825773</td>
+      <td>306165,3585</td>
+      <td>1915,649881</td>
+      <td>375,5734916</td>
+      <td>14,46872409</td>
+      <td>82,76964545</td>
+      <td>1042,246204</td>
+      <td>2823,768203</td>
+      <td>165,0091986</td>
+      <td>23,62239809</td>
+      <td>226,0455617</td>
+      <td>27,90988529</td>
+      <td>541,8534834</td>
+      <td>3959,396789</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020</td>
+      <td>Feminino</td>
+      <td>Individual</td>
+      <td>13742024</td>
+      <td>824280,8983</td>
+      <td>108887,9222</td>
+      <td>350943,3958</td>
+      <td>38960,84905</td>
+      <td>34095,35178</td>
+      <td>21,30159212</td>
+      <td>4844,195682</td>
+      <td>8370,566061</td>
+      <td>7058,815266</td>
+      <td>43057,85638</td>
+      <td>6855,480927</td>
+      <td>385,6600176</td>
+      <td>342,5531954</td>
+      <td>38,95472833</td>
+      <td>4,15209392</td>
+      <td>69334,24762</td>
+      <td>650257,5053</td>
+      <td>80595,53962</td>
+      <td>94,81626112</td>
+      <td>80500,72336</td>
+      <td>381,153451</td>
+      <td>80880,25581</td>
+      <td>80524,55017</td>
+      <td>11095,87461</td>
+      <td>11320,06953</td>
+      <td>260528,9243</td>
+      <td>53005,58211</td>
+      <td>3258125,682</td>
+      <td>34630,81196</td>
+      <td>4806,964073</td>
+      <td>375,9881843</td>
+      <td>1090,899398</td>
+      <td>20322,33716</td>
+      <td>55830,20803</td>
+      <td>369,240287</td>
+      <td>41,93836875</td>
+      <td>3563,112633</td>
+      <td>67,43354416</td>
+      <td>7998,746066</td>
+      <td>18593,06732</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020</td>
+      <td>Feminino</td>
+      <td>Conjunta</td>
+      <td>20007</td>
+      <td>2389,420352</td>
+      <td>404,1442881</td>
+      <td>1443,804194</td>
+      <td>189,681577</td>
+      <td>161,9076542</td>
+      <td>0,0857075</td>
+      <td>27,68821536</td>
+      <td>66,41450449</td>
+      <td>29,12729897</td>
+      <td>331,6120226</td>
+      <td>27,6444076</td>
+      <td>5,07386044</td>
+      <td>4,54435888</td>
+      <td>0,50732656</td>
+      <td>0,022175</td>
+      <td>26,55826457</td>
+      <td>1713,308416</td>
+      <td>306,4074938</td>
+      <td>0,51402198</td>
+      <td>305,8934718</td>
+      <td>2,70896624</td>
+      <td>308,602438</td>
+      <td>328,2730516</td>
+      <td>24,96756102</td>
+      <td>46,40385701</td>
+      <td>888,2521677</td>
+      <td>110,7523084</td>
+      <td>11999,04083</td>
+      <td>79,89125614</td>
+      <td>27,08742972</td>
+      <td>1,89964598</td>
+      <td>5,03199615</td>
+      <td>91,13972458</td>
+      <td>360,8503433</td>
+      <td>4,70082362</td>
+      <td>0,50783161</td>
+      <td>17,57722315</td>
+      <td>0,0695</td>
+      <td>39,9364155</td>
+      <td>52,40827169</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>Não declarado</td>
+      <td>Individual/Conjunta</td>
+      <td>2686</td>
+      <td>159,6228989</td>
+      <td>18,3132443</td>
+      <td>61,79204219</td>
+      <td>7,89693494</td>
+      <td>7,00174943</td>
+      <td>0,01262005</td>
+      <td>0,88256546</td>
+      <td>2,64501771</td>
+      <td>1,87070366</td>
+      <td>7,3864421</td>
+      <td>1,08918896</td>
+      <td>2,21774795</td>
+      <td>2,06361796</td>
+      <td>0,15412999</td>
+      <td>0</td>
+      <td>13,11080195</td>
+      <td>123,4060616</td>
+      <td>14,68861251</td>
+      <td>0,006966</td>
+      <td>14,68164651</td>
+      <td>0,101232</td>
+      <td>14,78287851</td>
+      <td>15,56373386</td>
+      <td>1,62648983</td>
+      <td>2,45147572</td>
+      <td>37,59435216</td>
+      <td>5,7276486</td>
+      <td>578,8391959</td>
+      <td>9,2483121</td>
+      <td>1,02155977</td>
+      <td>0,00975899</td>
+      <td>0,26102276</td>
+      <td>4,47974691</td>
+      <td>9,00732369</td>
+      <td>2,16392687</td>
+      <td>0,17947982</td>
+      <td>0,71272694</td>
+      <td>0,03</td>
+      <td>1,73637237</td>
+      <td>0,27910108</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2019</td>
+      <td>Masculino</td>
+      <td>Individual</td>
+      <td>17114273</td>
+      <td>1098408,143</td>
+      <td>211691,9071</td>
+      <td>673176,9719</td>
+      <td>56642,69684</td>
+      <td>45281,02301</td>
+      <td>38,14575925</td>
+      <td>11323,52808</td>
+      <td>23392,34427</td>
+      <td>13240,78902</td>
+      <td>47484,6487</td>
+      <td>12093,7319</td>
+      <td>15118,73148</td>
+      <td>13415,70053</td>
+      <td>1690,011514</td>
+      <td>13,01942758</td>
+      <td>73544,38536</td>
+      <td>856890,8153</td>
+      <td>115142,9649</td>
+      <td>157,5283446</td>
+      <td>114985,4366</td>
+      <td>629,1002896</td>
+      <td>115613,0589</td>
+      <td>117684,4756</td>
+      <td>11837,22548</td>
+      <td>15048,87811</td>
+      <td>489138,4188</td>
+      <td>72592,06758</td>
+      <td>7053789,38</td>
+      <td>50439,02413</td>
+      <td>10364,91838</td>
+      <td>476,7508725</td>
+      <td>2921,379897</td>
+      <td>35721,0764</td>
+      <td>58458,49856</td>
+      <td>14708,92648</td>
+      <td>1922,092317</td>
+      <td>5605,748609</td>
+      <td>331,6930821</td>
+      <td>15428,42808</td>
+      <td>33388,06948</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2019</td>
+      <td>Masculino</td>
+      <td>Conjunta</td>
+      <td>163580</td>
+      <td>20070,69394</td>
+      <td>9342,23837</td>
+      <td>29185,28474</td>
+      <td>1273,222984</td>
+      <td>892,6426873</td>
+      <td>0,67816491</td>
+      <td>379,9021321</td>
+      <td>542,6037753</td>
+      <td>272,8453355</td>
+      <td>2172,529999</td>
+      <td>473,0169142</td>
+      <td>139,1183327</td>
+      <td>121,4917952</td>
+      <td>17,48515529</td>
+      <td>0,14138221</td>
+      <td>271,2191246</td>
+      <td>14926,13747</td>
+      <td>2902,735496</td>
+      <td>9,35474198</td>
+      <td>2893,380755</td>
+      <td>18,35313051</td>
+      <td>2911,733305</td>
+      <td>2831,677992</td>
+      <td>346,9535811</td>
+      <td>284,2994361</td>
+      <td>17906,04488</td>
+      <td>1779,960676</td>
+      <td>283531,6511</td>
+      <td>2248,632649</td>
+      <td>364,4499439</td>
+      <td>11,11911905</td>
+      <td>75,59053327</td>
+      <td>1009,896264</td>
+      <td>2516,156573</td>
+      <td>130,7918453</td>
+      <td>19,52740239</td>
+      <td>198,7020831</td>
+      <td>24,20263683</td>
+      <td>549,0174796</td>
+      <td>3713,399153</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2019</td>
+      <td>Feminino</td>
+      <td>Individual</td>
+      <td>13200343</td>
+      <td>792510,3533</td>
+      <td>112720,8256</td>
+      <td>333116,3062</td>
+      <td>34746,54956</td>
+      <td>29952,25504</td>
+      <td>25,94985605</td>
+      <td>4768,344668</td>
+      <td>9684,017385</td>
+      <td>7846,767414</td>
+      <td>41758,07413</td>
+      <td>7347,040202</td>
+      <td>369,2866123</td>
+      <td>326,5169469</td>
+      <td>36,27506491</td>
+      <td>6,49460053</td>
+      <td>66459,49161</td>
+      <td>624299,1264</td>
+      <td>76505,74393</td>
+      <td>69,69754671</td>
+      <td>76436,04638</td>
+      <td>439,9367958</td>
+      <td>76875,06205</td>
+      <td>77893,10291</td>
+      <td>9894,263595</td>
+      <td>11467,15968</td>
+      <td>247785,2642</td>
+      <td>51086,95051</td>
+      <td>3079610,984</td>
+      <td>33136,42382</td>
+      <td>4672,591743</td>
+      <td>317,1641382</td>
+      <td>1132,510912</td>
+      <td>22949,02241</td>
+      <td>54226,15942</td>
+      <td>355,6104504</td>
+      <td>38,29839525</td>
+      <td>3595,072058</td>
+      <td>46,41549505</td>
+      <td>7625,858646</td>
+      <td>16438,57753</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2019</td>
+      <td>Feminino</td>
+      <td>Conjunta</td>
+      <td>17600</td>
+      <td>2051,566482</td>
+      <td>405,8510059</td>
+      <td>1458,082273</td>
+      <td>149,9922428</td>
+      <td>124,8403481</td>
+      <td>0,06089268</td>
+      <td>25,09100202</td>
+      <td>61,29805059</td>
+      <td>29,16084672</td>
+      <td>291,4715801</td>
+      <td>29,79101253</td>
+      <td>5,45903628</td>
+      <td>4,77374959</td>
+      <td>0,68528669</td>
+      <td>0</td>
+      <td>21,09801074</td>
+      <td>1463,295702</td>
+      <td>258,4106122</td>
+      <td>0,36750574</td>
+      <td>258,0431065</td>
+      <td>3,50489795</td>
+      <td>261,5480044</td>
+      <td>278,45339</td>
+      <td>20,96202442</td>
+      <td>39,20397154</td>
+      <td>725,9415338</td>
+      <td>205,9846575</td>
+      <td>10766,27596</td>
+      <td>88,55537669</td>
+      <td>23,62790486</td>
+      <td>1,50455834</td>
+      <td>4,77466645</td>
+      <td>92,85151952</td>
+      <td>319,2720074</td>
+      <td>4,84146255</td>
+      <td>0,68550974</td>
+      <td>14,36947269</td>
+      <td>0,12551039</td>
+      <td>34,73898156</td>
+      <td>48,30044079</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2019</td>
+      <td>Não declarado</td>
+      <td>Individual/Conjunta</td>
+      <td>2708</td>
+      <td>160,9380949</td>
+      <td>17,47647732</td>
+      <td>56,77923379</td>
+      <td>7,54797276</td>
+      <td>6,58050766</td>
+      <td>0,01773512</td>
+      <td>0,94972998</td>
+      <td>3,50226223</td>
+      <td>2,21155531</td>
+      <td>7,56721933</td>
+      <td>0,92418115</td>
+      <td>2,12598825</td>
+      <td>1,96519619</td>
+      <td>0,16036234</td>
+      <td>0,00042972</td>
+      <td>12,85121361</td>
+      <td>124,2077022</td>
+      <td>14,69817553</td>
+      <td>0,00078494</td>
+      <td>14,69739059</td>
+      <td>0,08349555</td>
+      <td>14,78088614</td>
+      <td>15,85892644</td>
+      <td>1,5159652</td>
+      <td>2,6475432</td>
+      <td>31,71356568</td>
+      <td>3,27244709</td>
+      <td>519,4303722</td>
+      <td>3,16830971</td>
+      <td>1,00137845</td>
+      <td>0,00302684</td>
+      <td>0,30270323</td>
+      <td>5,35987467</td>
+      <td>9,4480431</td>
+      <td>2,04872919</td>
+      <td>0,17533248</td>
+      <td>0,67309657</td>
+      <td>0,03</td>
+      <td>0,99512472</td>
+      <td>0,74426757</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+            </body>
+            </html>
+            

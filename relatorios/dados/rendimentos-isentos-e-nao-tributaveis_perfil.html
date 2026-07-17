@@ -1,0 +1,848 @@
+
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <title>Perfil de Dados - rendimentos-isentos-e-nao-tributaveis</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                <style>
+                    body { padding: 20px; }
+                    h1, h2, h3 { margin-top: 30px; }
+                    pre { background-color: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
+                    .back-link { margin-bottom: 20px; display: inline-block; }
+                </style>
+            </head>
+            <body>
+                <div class="container-fluid">
+                    <a href="index.html" class="btn btn-outline-secondary back-link">&larr; Voltar para o Menu</a>
+                    <h1 class="text-primary">Perfil Exploratório - rendimentos-isentos-e-nao-tributaveis</h1>
+                    <hr>
+                    
+                    <h2>1. Visão Geral</h2>
+                    <ul>
+                        <li><strong>Total de Linhas:</strong> 94</li>
+                        <li><strong>Total de Colunas:</strong> 30</li>
+                    </ul>
+                    
+                    <h2>2. Estrutura dos Dados (Info)</h2>
+                    <pre><class 'pandas.DataFrame'>
+RangeIndex: 94 entries, 0 to 93
+Data columns (total 30 columns):
+ #   Column                                                                                                                                                                                                                                                                                      Non-Null Count  Dtype
+---  ------                                                                                                                                                                                                                                                                                      --------------  -----
+ 0   Ano Calendário                                                                                                                                                                                                                                                                              94 non-null     int64
+ 1   Faixa de Salários-Mínimos                                                                                                                                                                                                                                                                   94 non-null     str  
+ 2   Bolsas de estudo e de pesquisa caracterizadas como doação, exceto médico-residente ou Pronatec, exclusivamente para proceder a estudos ou pesquisas e desde que os resultados dessas atividades não representem vantagem para o doador, nem importem contraprestação de serviços            94 non-null     str  
+ 3   Bolsas de estudo e de pesquisa caracterizadas como doação, quando recebidas exclusivamente para proceder a estudos ou pesquisas, recebidas por médico-residente e por servidor da rede pública de educação profissional, científica e tecnológica que participe das atividades do Pronatec  94 non-null     str  
+ 4   Capital das apólices de seguro ou pecúlio pago por morte do segurado, prêmio de seguro restituído em qualquer caso e pecúlio recebido de entidades de previdência privada em decorrência de morte ou invalidez permanente                                                                   94 non-null     str  
+ 5   Indenizações por rescisão de contrato de trabalho, inclusive a título de PDV, e por acidente de trabalho; e FGTS                                                                                                                                                                            94 non-null     str  
+ 6   Ganho de capital na alienação de bem, direito ou conjunto de bens ou direitos da mesma natureza, alienados em um mesmo mês, de valor total de alienação até R$ 20.000,00, para ações alienadas no mercado de balcão, e R$ 35.000,00, nos demais casos                                       94 non-null     str  
+ 7   Ganho de capital na alienação do único imóvel por valor igual ou inferior a R$ 440.000,00 e que, nos últimos 5 anos, não tenha efetuado nenhuma outra alienação de imóvel                                                                                                                   94 non-null     str  
+ 8   Ganho de capital na venda de imóveis residenciais para aquisição, no prazo de 180 dias, de imóveis residenciais localizados no Brasil e redução sobre o ganho de capital                                                                                                                    94 non-null     str  
+ 9   Ganho de capital na alienação de moeda estrangeira mantida em espécie cujo total de alienações, no ano-calendário, seja igual ou inferior ao equivalente a US$ 5,000.00                                                                                                                     94 non-null     str  
+ 10  Lucros e dividendos recebidos                                                                                                                                                                                                                                                               94 non-null     str  
+ 11  Parcela isenta de proventos de aposentadoria, reserva remunerada, reforma e pensão de declarante com 65 anos ou mais                                                                                                                                                                        94 non-null     str  
+ 12  Pensão, proventos de aposentadoria ou reforma por moléstia grave ou aposentadoria ou reforma por acidente  em serviço                                                                                                                                                                       94 non-null     str  
+ 13  Rendimentos de cadernetas de poupança, letras hipotecárias, letras de crédito do agronegócio e imobiliário (LCA e LCI) e certificados de recebíveis do agronegócio e imobiliários (CRA e CRI)                                                                                               94 non-null     str  
+ 14  Rendimento de sócio ou titular de microempresa ou empresa de pequeno porte optante pelo Simples Nacional, exceto pro labore, aluguéis e serviços prestados                                                                                                                                  94 non-null     str  
+ 15  Transferências patrimoniais - doações e heranças                                                                                                                                                                                                                                            94 non-null     str  
+ 16  Imposto sobre a renda de anos-calendário anteriores compensado judicialmente neste ano-calendário                                                                                                                                                                                           94 non-null     str  
+ 17  75% (setenta e cinco por cento) dos rendimentos do trabalho assalariado recebidos em moeda estrangeira por servidores de autarquias ou repartições do Governo Brasileiro situadas no exterior, convertidos em reais                                                                         94 non-null     str  
+ 18  Incorporação de reservas ao capital / Bonificações em ações                                                                                                                                                                                                                                 94 non-null     str  
+ 19  Transferências patrimoniais - meação e dissolução da sociedade conjugal e da unidade familiar                                                                                                                                                                                               94 non-null     str  
+ 20  Ganhos líquidos em operações no mercado à vista de ações negociadas em bolsas de valores nas alienações realizadas até R$ 20.000,00 em cada mês, para o conjunto de ações                                                                                                                   94 non-null     str  
+ 21  Ganhos líquidos em operações com ouro, ativo financeiro, nas alienações realizadas até R$ 20.000,00 em cada mês                                                                                                                                                                             94 non-null     str  
+ 22  Rendimento bruto, até o máximo de 90%, da prestação de serviços decorrente do transporte de carga e com trator, máquina de terraplenagem, colheitadeira e assemelhados                                                                                                                      94 non-null     str  
+ 23  Rendimento bruto, até o máximo de 40%, da prestação de serviços decorrente do transporte de passageiros                                                                                                                                                                                     94 non-null     str  
+ 24  Restituição de imposto sobre a renda de anos-calendário anteriores                                                                                                                                                                                                                          94 non-null     str  
+ 25  Outros                                                                                                                                                                                                                                                                                      94 non-null     str  
+ 26  Parcela isenta correspondente à atividade rural                                                                                                                                                                                                                                             94 non-null     str  
+ 27  Recuperação de prejuízos em Renda Variável (bolsa de valores, de mercadorias, de futuros e assemelhados e fundos de investimento imobiliário)                                                                                                                                               94 non-null     str  
+ 28  Demais Rend. isentos e não-tributáveis dos dependentes                                                                                                                                                                                                                                      94 non-null     str  
+ 29  Benefícios ind. e reembolso desp. receb. voluntário Fifa, da Subsidiária Fifa Brasil ou Comitê Organizador Brasileiro (LOC)                                                                                                                                                                 94 non-null     str  
+dtypes: int64(1), str(29)
+memory usage: 22.2 KB
+</pre>
+                    
+                    <h2>3. Estatísticas Descritivas</h2>
+                    <div class="table-responsive">
+                        <table border="1" class="dataframe table table-striped table-bordered">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ano Calendário</th>
+      <th>Faixa de Salários-Mínimos</th>
+      <th>Bolsas de estudo e de pesquisa caracterizadas como doação, exceto médico-residente ou Pronatec, exclusivamente para proceder a estudos ou pesquisas e desde que os resultados dessas atividades não representem vantagem para o doador, nem importem contraprestação de serviços</th>
+      <th>Bolsas de estudo e de pesquisa caracterizadas como doação, quando recebidas exclusivamente para proceder a estudos ou pesquisas, recebidas por médico-residente e por servidor da rede pública de educação profissional, científica e tecnológica que participe das atividades do Pronatec</th>
+      <th>Capital das apólices de seguro ou pecúlio pago por morte do segurado, prêmio de seguro restituído em qualquer caso e pecúlio recebido de entidades de previdência privada em decorrência de morte ou invalidez permanente</th>
+      <th>Indenizações por rescisão de contrato de trabalho, inclusive a título de PDV, e por acidente de trabalho; e FGTS</th>
+      <th>Ganho de capital na alienação de bem, direito ou conjunto de bens ou direitos da mesma natureza, alienados em um mesmo mês, de valor total de alienação até R$ 20.000,00, para ações alienadas no mercado de balcão, e R$ 35.000,00, nos demais casos</th>
+      <th>Ganho de capital na alienação do único imóvel por valor igual ou inferior a R$ 440.000,00 e que, nos últimos 5 anos, não tenha efetuado nenhuma outra alienação de imóvel</th>
+      <th>Ganho de capital na venda de imóveis residenciais para aquisição, no prazo de 180 dias, de imóveis residenciais localizados no Brasil e redução sobre o ganho de capital</th>
+      <th>Ganho de capital na alienação de moeda estrangeira mantida em espécie cujo total de alienações, no ano-calendário, seja igual ou inferior ao equivalente a US$ 5,000.00</th>
+      <th>Lucros e dividendos recebidos</th>
+      <th>Parcela isenta de proventos de aposentadoria, reserva remunerada, reforma e pensão de declarante com 65 anos ou mais</th>
+      <th>Pensão, proventos de aposentadoria ou reforma por moléstia grave ou aposentadoria ou reforma por acidente&nbsp;&nbsp;em serviço</th>
+      <th>Rendimentos de cadernetas de poupança, letras hipotecárias, letras de crédito do agronegócio e imobiliário (LCA e LCI) e certificados de recebíveis do agronegócio e imobiliários (CRA e CRI)</th>
+      <th>Rendimento de sócio ou titular de microempresa ou empresa de pequeno porte optante pelo Simples Nacional, exceto pro labore, aluguéis e serviços prestados</th>
+      <th>Transferências patrimoniais - doações e heranças</th>
+      <th>Imposto sobre a renda de anos-calendário anteriores compensado judicialmente neste ano-calendário</th>
+      <th>75% (setenta e cinco por cento) dos rendimentos do trabalho assalariado recebidos em moeda estrangeira por servidores de autarquias ou repartições do Governo Brasileiro situadas no exterior, convertidos em reais</th>
+      <th>Incorporação de reservas ao capital / Bonificações em ações</th>
+      <th>Transferências patrimoniais - meação e dissolução da sociedade conjugal e da unidade familiar</th>
+      <th>Ganhos líquidos em operações no mercado à vista de ações negociadas em bolsas de valores nas alienações realizadas até R$ 20.000,00 em cada mês, para o conjunto de ações</th>
+      <th>Ganhos líquidos em operações com ouro, ativo financeiro, nas alienações realizadas até R$ 20.000,00 em cada mês</th>
+      <th>Rendimento bruto, até o máximo de 90%, da prestação de serviços decorrente do transporte de carga e com trator, máquina de terraplenagem, colheitadeira e assemelhados</th>
+      <th>Rendimento bruto, até o máximo de 40%, da prestação de serviços decorrente do transporte de passageiros</th>
+      <th>Restituição de imposto sobre a renda de anos-calendário anteriores</th>
+      <th>Outros</th>
+      <th>Parcela isenta correspondente à atividade rural</th>
+      <th>Recuperação de prejuízos em Renda Variável (bolsa de valores, de mercadorias, de futuros e assemelhados e fundos de investimento imobiliário)</th>
+      <th>Demais Rend. isentos e não-tributáveis dos dependentes</th>
+      <th>Benefícios ind. e reembolso desp. receb. voluntário Fifa, da Subsidiária Fifa Brasil ou Comitê Organizador Brasileiro (LOC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>94.000000</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>NaN</td>
+      <td>18</td>
+      <td>94</td>
+      <td>90</td>
+      <td>94</td>
+      <td>94</td>
+      <td>27</td>
+      <td>86</td>
+      <td>86</td>
+      <td>86</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>90</td>
+      <td>90</td>
+      <td>92</td>
+      <td>90</td>
+      <td>90</td>
+      <td>90</td>
+      <td>90</td>
+      <td>85</td>
+      <td>90</td>
+      <td>94</td>
+      <td>94</td>
+      <td>90</td>
+      <td>22</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>NaN</td>
+      <td>Todas</td>
+      <td>48,81276313</td>
+      <td>0</td>
+      <td>7,66925054</td>
+      <td>1522,546074</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>581,8261439</td>
+      <td>238,9407142</td>
+      <td>52,88905739</td>
+      <td>2302,89329</td>
+      <td>508,4078986</td>
+      <td>16,83665549</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7244,897556</td>
+      <td>40,72832963</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>NaN</td>
+      <td>9</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>68</td>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>10</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>73</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2017.329787</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>2.600200</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2007.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2016.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2018.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2019.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2020.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    
+                    <h2>4. Amostra de Dados (Primeiras 10 linhas)</h2>
+                    <div class="table-responsive">
+                        <table border="1" class="dataframe table table-striped table-bordered">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Ano Calendário</th>
+      <th>Faixa de Salários-Mínimos</th>
+      <th>Bolsas de estudo e de pesquisa caracterizadas como doação, exceto médico-residente ou Pronatec, exclusivamente para proceder a estudos ou pesquisas e desde que os resultados dessas atividades não representem vantagem para o doador, nem importem contraprestação de serviços</th>
+      <th>Bolsas de estudo e de pesquisa caracterizadas como doação, quando recebidas exclusivamente para proceder a estudos ou pesquisas, recebidas por médico-residente e por servidor da rede pública de educação profissional, científica e tecnológica que participe das atividades do Pronatec</th>
+      <th>Capital das apólices de seguro ou pecúlio pago por morte do segurado, prêmio de seguro restituído em qualquer caso e pecúlio recebido de entidades de previdência privada em decorrência de morte ou invalidez permanente</th>
+      <th>Indenizações por rescisão de contrato de trabalho, inclusive a título de PDV, e por acidente de trabalho; e FGTS</th>
+      <th>Ganho de capital na alienação de bem, direito ou conjunto de bens ou direitos da mesma natureza, alienados em um mesmo mês, de valor total de alienação até R$ 20.000,00, para ações alienadas no mercado de balcão, e R$ 35.000,00, nos demais casos</th>
+      <th>Ganho de capital na alienação do único imóvel por valor igual ou inferior a R$ 440.000,00 e que, nos últimos 5 anos, não tenha efetuado nenhuma outra alienação de imóvel</th>
+      <th>Ganho de capital na venda de imóveis residenciais para aquisição, no prazo de 180 dias, de imóveis residenciais localizados no Brasil e redução sobre o ganho de capital</th>
+      <th>Ganho de capital na alienação de moeda estrangeira mantida em espécie cujo total de alienações, no ano-calendário, seja igual ou inferior ao equivalente a US$ 5,000.00</th>
+      <th>Lucros e dividendos recebidos</th>
+      <th>Parcela isenta de proventos de aposentadoria, reserva remunerada, reforma e pensão de declarante com 65 anos ou mais</th>
+      <th>Pensão, proventos de aposentadoria ou reforma por moléstia grave ou aposentadoria ou reforma por acidente&nbsp;&nbsp;em serviço</th>
+      <th>Rendimentos de cadernetas de poupança, letras hipotecárias, letras de crédito do agronegócio e imobiliário (LCA e LCI) e certificados de recebíveis do agronegócio e imobiliários (CRA e CRI)</th>
+      <th>Rendimento de sócio ou titular de microempresa ou empresa de pequeno porte optante pelo Simples Nacional, exceto pro labore, aluguéis e serviços prestados</th>
+      <th>Transferências patrimoniais - doações e heranças</th>
+      <th>Imposto sobre a renda de anos-calendário anteriores compensado judicialmente neste ano-calendário</th>
+      <th>75% (setenta e cinco por cento) dos rendimentos do trabalho assalariado recebidos em moeda estrangeira por servidores de autarquias ou repartições do Governo Brasileiro situadas no exterior, convertidos em reais</th>
+      <th>Incorporação de reservas ao capital / Bonificações em ações</th>
+      <th>Transferências patrimoniais - meação e dissolução da sociedade conjugal e da unidade familiar</th>
+      <th>Ganhos líquidos em operações no mercado à vista de ações negociadas em bolsas de valores nas alienações realizadas até R$ 20.000,00 em cada mês, para o conjunto de ações</th>
+      <th>Ganhos líquidos em operações com ouro, ativo financeiro, nas alienações realizadas até R$ 20.000,00 em cada mês</th>
+      <th>Rendimento bruto, até o máximo de 90%, da prestação de serviços decorrente do transporte de carga e com trator, máquina de terraplenagem, colheitadeira e assemelhados</th>
+      <th>Rendimento bruto, até o máximo de 40%, da prestação de serviços decorrente do transporte de passageiros</th>
+      <th>Restituição de imposto sobre a renda de anos-calendário anteriores</th>
+      <th>Outros</th>
+      <th>Parcela isenta correspondente à atividade rural</th>
+      <th>Recuperação de prejuízos em Renda Variável (bolsa de valores, de mercadorias, de futuros e assemelhados e fundos de investimento imobiliário)</th>
+      <th>Demais Rend. isentos e não-tributáveis dos dependentes</th>
+      <th>Benefícios ind. e reembolso desp. receb. voluntário Fifa, da Subsidiária Fifa Brasil ou Comitê Organizador Brasileiro (LOC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020</td>
+      <td>Até 1/2</td>
+      <td>48,81276313</td>
+      <td>12,99392111</td>
+      <td>7,66925054</td>
+      <td>1522,546074</td>
+      <td>27,02836822</td>
+      <td>0,77916638</td>
+      <td>0,96241566</td>
+      <td>0,40340154</td>
+      <td>581,8261439</td>
+      <td>238,9407142</td>
+      <td>52,88905739</td>
+      <td>2302,89329</td>
+      <td>508,4078986</td>
+      <td>16,83665549</td>
+      <td>0,72899512</td>
+      <td>0,09833781</td>
+      <td>3,80887975</td>
+      <td>0,49310974</td>
+      <td>151,2313806</td>
+      <td>4,23106676</td>
+      <td>2,20752722</td>
+      <td>16,19243322</td>
+      <td>370,8569779</td>
+      <td>7244,897556</td>
+      <td>40,72832963</td>
+      <td>5,00983666</td>
+      <td>0,00659408</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020</td>
+      <td>De 1/2 a 1</td>
+      <td>81,2265008</td>
+      <td>28,91079232</td>
+      <td>21,53044603</td>
+      <td>2307,265979</td>
+      <td>53,64741324</td>
+      <td>2,10877195</td>
+      <td>1,03012393</td>
+      <td>0,71908964</td>
+      <td>838,5140285</td>
+      <td>857,741188</td>
+      <td>240,5678334</td>
+      <td>1240,196345</td>
+      <td>1337,46762</td>
+      <td>92,47345641</td>
+      <td>0,88217179</td>
+      <td>0,16195822</td>
+      <td>3,65457103</td>
+      <td>2,10882718</td>
+      <td>157,742147</td>
+      <td>5,00837212</td>
+      <td>8,81188404</td>
+      <td>59,81245827</td>
+      <td>210,5350944</td>
+      <td>8040,335486</td>
+      <td>141,1119213</td>
+      <td>8,00762734</td>
+      <td>0,0120593</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020</td>
+      <td>De 1 a 2</td>
+      <td>267,8818583</td>
+      <td>55,45210385</td>
+      <td>88,25605149</td>
+      <td>3360,606888</td>
+      <td>179,4412785</td>
+      <td>10,27345657</td>
+      <td>4,07344864</td>
+      <td>1,9384512</td>
+      <td>2367,641219</td>
+      <td>48584,34274</td>
+      <td>2267,828624</td>
+      <td>1898,815056</td>
+      <td>4400,108418</td>
+      <td>482,0326755</td>
+      <td>2,32351193</td>
+      <td>0,81993644</td>
+      <td>7,14707519</td>
+      <td>11,41777126</td>
+      <td>254,4913927</td>
+      <td>10,53519452</td>
+      <td>43,9844561</td>
+      <td>120,4380731</td>
+      <td>242,5065746</td>
+      <td>10032,64293</td>
+      <td>611,5749087</td>
+      <td>19,30279977</td>
+      <td>0,00155117</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020</td>
+      <td>De 2 a 3</td>
+      <td>358,2390444</td>
+      <td>171,675105</td>
+      <td>140,145674</td>
+      <td>2498,797983</td>
+      <td>262,8278302</td>
+      <td>18,02820749</td>
+      <td>7,14860394</td>
+      <td>2,07690205</td>
+      <td>2633,716116</td>
+      <td>18484,41365</td>
+      <td>1874,055589</td>
+      <td>2683,119457</td>
+      <td>4559,156906</td>
+      <td>835,7071788</td>
+      <td>2,49207398</td>
+      <td>1,15428028</td>
+      <td>7,02790552</td>
+      <td>19,7622762</td>
+      <td>182,0464879</td>
+      <td>8,10416192</td>
+      <td>90,31935251</td>
+      <td>77,8501655</td>
+      <td>244,3956581</td>
+      <td>6911,56739</td>
+      <td>1068,001101</td>
+      <td>21,9483574</td>
+      <td>0,01029168</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020</td>
+      <td>De 3 a 5</td>
+      <td>480,6428638</td>
+      <td>464,2499335</td>
+      <td>326,0079577</td>
+      <td>3816,077063</td>
+      <td>233,5250329</td>
+      <td>62,77515447</td>
+      <td>25,09719131</td>
+      <td>2,46100765</td>
+      <td>6376,004605</td>
+      <td>7633,836946</td>
+      <td>5193,997858</td>
+      <td>3007,103344</td>
+      <td>9580,090038</td>
+      <td>2950,589476</td>
+      <td>5,46351848</td>
+      <td>3,97868624</td>
+      <td>13,8661459</td>
+      <td>70,02005729</td>
+      <td>238,2561345</td>
+      <td>12,03045631</td>
+      <td>342,5569111</td>
+      <td>62,45510058</td>
+      <td>206,7896816</td>
+      <td>8947,205021</td>
+      <td>3281,740045</td>
+      <td>41,81485486</td>
+      <td>0,07609103</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2020</td>
+      <td>De 5 a 7</td>
+      <td>244,4814991</td>
+      <td>157,659111</td>
+      <td>301,3846783</td>
+      <td>2758,896349</td>
+      <td>123,4195489</td>
+      <td>85,80712017</td>
+      <td>34,61213794</td>
+      <td>1,64392294</td>
+      <td>6598,598436</td>
+      <td>2319,225427</td>
+      <td>4560,091878</td>
+      <td>1896,572696</td>
+      <td>8876,890268</td>
+      <td>3356,987669</td>
+      <td>4,47972697</td>
+      <td>3,98237525</td>
+      <td>15,33536758</td>
+      <td>83,78962758</td>
+      <td>150,5977744</td>
+      <td>8,53428868</td>
+      <td>506,1609725</td>
+      <td>20,670689</td>
+      <td>101,126883</td>
+      <td>5157,682396</td>
+      <td>4024,316579</td>
+      <td>36,09389865</td>
+      <td>0,14334916</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2020</td>
+      <td>De 7 a 10</td>
+      <td>266,0904368</td>
+      <td>177,0208041</td>
+      <td>403,1995679</td>
+      <td>3152,921419</td>
+      <td>121,5817055</td>
+      <td>158,4244044</td>
+      <td>76,64207908</td>
+      <td>1,44094273</td>
+      <td>10966,2079</td>
+      <td>1829,943622</td>
+      <td>5672,90081</td>
+      <td>2024,505693</td>
+      <td>12181,46721</td>
+      <td>3288,874169</td>
+      <td>4,23361398</td>
+      <td>7,04883695</td>
+      <td>24,29015589</td>
+      <td>158,8965569</td>
+      <td>143,875148</td>
+      <td>12,7153189</td>
+      <td>848,6754886</td>
+      <td>13,13708613</td>
+      <td>89,61676475</td>
+      <td>6096,925906</td>
+      <td>6243,027267</td>
+      <td>45,58540447</td>
+      <td>0,08002417</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2020</td>
+      <td>De 10 a 15</td>
+      <td>214,7746204</td>
+      <td>266,5020849</td>
+      <td>545,2351305</td>
+      <td>3685,363283</td>
+      <td>130,1174973</td>
+      <td>291,7348598</td>
+      <td>144,4632508</td>
+      <td>1,50582559</td>
+      <td>16959,60715</td>
+      <td>1626,470836</td>
+      <td>9994,093651</td>
+      <td>2282,453584</td>
+      <td>15272,87559</td>
+      <td>4545,023638</td>
+      <td>4,93011886</td>
+      <td>13,88690318</td>
+      <td>40,13825811</td>
+      <td>278,0396553</td>
+      <td>140,7941113</td>
+      <td>19,28941683</td>
+      <td>1375,617016</td>
+      <td>10,14132254</td>
+      <td>92,09628282</td>
+      <td>8151,359305</td>
+      <td>7021,649023</td>
+      <td>60,84226114</td>
+      <td>0,13604961</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2020</td>
+      <td>De 15 a 20</td>
+      <td>70,91984726</td>
+      <td>59,45517356</td>
+      <td>460,5172016</td>
+      <td>2974,366796</td>
+      <td>88,22003875</td>
+      <td>283,0937425</td>
+      <td>161,838792</td>
+      <td>0,80497469</td>
+      <td>16669,62993</td>
+      <td>914,7562031</td>
+      <td>8095,921004</td>
+      <td>1660,063354</td>
+      <td>12656,91273</td>
+      <td>3933,730144</td>
+      <td>2,59643684</td>
+      <td>14,80737711</td>
+      <td>46,31618882</td>
+      <td>311,3282197</td>
+      <td>90,73885853</td>
+      <td>26,15487383</td>
+      <td>1043,726885</td>
+      <td>7,34321233</td>
+      <td>65,98260107</td>
+      <td>5327,031728</td>
+      <td>4819,990768</td>
+      <td>43,48737043</td>
+      <td>0,21322657</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2020</td>
+      <td>De 20 a 30</td>
+      <td>57,00136288</td>
+      <td>32,45353295</td>
+      <td>654,3548795</td>
+      <td>3677,429277</td>
+      <td>104,2967902</td>
+      <td>447,2626001</td>
+      <td>267,7367368</td>
+      <td>2,39671869</td>
+      <td>27166,11796</td>
+      <td>962,2151386</td>
+      <td>12964,36098</td>
+      <td>2255,73865</td>
+      <td>16719,10581</td>
+      <td>6310,561283</td>
+      <td>4,43536406</td>
+      <td>152,4916293</td>
+      <td>78,21793892</td>
+      <td>564,7028236</td>
+      <td>94,58768965</td>
+      <td>13,2418769</td>
+      <td>1181,712725</td>
+      <td>8,5119187</td>
+      <td>102,8173861</td>
+      <td>6605,222343</td>
+      <td>6199,722129</td>
+      <td>75,36872273</td>
+      <td>0,18687926</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                </div>
+            </body>
+            </html>
+            
